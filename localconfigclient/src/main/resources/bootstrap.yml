@@ -1,0 +1,11 @@
+#通过spring.application.name和spring.profiles.active两者的值，拼接形成要搜索的文件名
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev
+    #要访问的Server config
+  cloud:
+    config:
+      uri: http://localhost:8762
+      fail-fast: true
